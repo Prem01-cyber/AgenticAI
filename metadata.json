@@ -1,0 +1,68 @@
+{
+  "plot_csv_chart": {
+    "trigger_word": ["plot chart", "create graph", "visualize data"],
+    "sample_payload": {
+      "csv_file": "sample_data.csv",
+      "x_col": "Year",
+      "y_col": "Sales"
+    },
+    "prerequisite": null
+  },
+
+  "auto_clean_dataset": {
+    "trigger_word": ["clean data", "auto-clean dataset", "fix missing values"],
+    "sample_payload": {
+      "csv_file": "sample_dirty_data.csv",
+      "all_columns": ["Name", "Age", "City", "Income"]
+    },
+    "prerequisite": null
+  },
+  "train_test_split_csv": {
+    "trigger_word": ["split data", "train test split", "prepare training data"],
+    "sample_payload": {
+      "csv_file": "sample_dataset.csv",
+      "features": ["Age", "Income"],
+      "target": "Purchased",
+      "test_size": 0.25
+    },
+    "prerequisite": null
+  },
+  "select_model_llm": {
+    "trigger_word": [
+      "smart model suggestion",
+      "llm model select",
+      "analyze description"
+    ],
+    "sample_payload": {
+      "description": "I want to build a model to forecast house prices based on size, location, and number of rooms."
+    },
+    "prerequisite": null
+  },
+  "feature_summary": {
+    "trigger_word": [
+      "summarize features",
+      "describe columns",
+      "feature summary"
+    ],
+    "sample_payload": {
+      "csv_file": "sample_dataset.csv"
+    },
+    "prerequisite": null
+  },
+  "generate_synthetic_data": {
+    "trigger_word": ["generate data", "create synthetic dataset", "fake data"],
+    "sample_payload": {
+      "row_count": 5,
+      "schema": [
+        { "name": "Age", "type": "numeric" },
+        {
+          "name": "Gender",
+          "type": "categorical",
+          "values": ["Male", "Female"]
+        },
+        { "name": "JoinDate", "type": "date" }
+      ]
+    },
+    "prerequisite": null
+  }
+}
